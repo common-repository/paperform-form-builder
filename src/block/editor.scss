@@ -1,0 +1,58 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+.wp-block-paperform-form {
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 2rem 3rem -1rem rgba(0,0,0,.1);
+  //font-family: Lato, sans;
+  color: $black;
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 2rem;
+  [c=wp-block-paperform-form__input], input[type=number] {
+      
+      border-bottom: 1px solid #ddd;
+      color: $blue;
+      &:focus {
+        border-bottom-color: $blue;
+      }
+  }
+
+  label {
+    margin-top: 1rem;
+    font-weight: bold;
+    display: block;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+  input[type=checkbox] {
+    vertical-align: text-bottom;
+    margin-left: 10px;
+    margin-top: -2px;
+    position: relative;
+    top: -2px;
+    display: inline-block;
+  }
+  &__preview, &__advanced {
+    border: 0.1rem solid #eee;
+    background: #f8f8f8;
+    border-radius: 4px;
+  }
+  &__advanced {
+    label {
+      font-weight: 400;
+    }
+    padding: 1rem;
+    input[type=checkbox] {
+      float: right;
+      top: 10px;
+    }
+  }
+}
